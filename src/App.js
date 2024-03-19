@@ -43,7 +43,7 @@ function App() {
         <img
           src={Search}
           alt=""
-          className="flex bg-white rounded-r-full p-[17.5px]"
+          className="flex bg-white rounded-r-full cursor-pointer p-[17.5px]"
           onClick={searchClickLocation}
         />
       </div>
