@@ -19,6 +19,15 @@ function App() {
       }
     }
   };
+  const searchClickLocation = () => {
+    if (location !== "") {
+      axios.get(url).then((response) => {
+        setData(response.data);
+        console.log(response.data);
+      });
+      setLocation("");
+    }
+  };
 
   return (
     <div className=" w-[607px] h-[829px] m-auto mt-20 rounded-md  bg-gradient-to-r from-violet-500 to-fuchsia-500">
@@ -35,6 +44,7 @@ function App() {
           src={Search}
           alt=""
           className="flex bg-white rounded-r-full p-[17.5px]"
+          onClick={searchClickLocation}
         />
       </div>
       <Weather weatherData={data} />
