@@ -22,22 +22,20 @@ function App() {
 
   return (
     <div className=" w-[607px] h-[829px] m-auto mt-20 rounded-md  bg-gradient-to-r from-violet-500 to-fuchsia-500">
-      <div className="flex items-center justify-center gap-5">
+      <div className="flex items-center animate-pulse focus-within:animate-none  justify-center">
         <input
           type="text"
-          className=" city rounded-lg p-4 my-10 bg-white"
+          className=" city shadow-2xl placeholder:text-gray-500 focus:outline-none rounded-l-lg p-4 my-10 bg-white"
           placeholder="Name a City"
           value={location}
           onChange={(event) => setLocation(event.target.value)}
           onKeyDownCapture={searchLocation}
         />
-        <div className="">
-          <img
-            src={Search}
-            alt=""
-            className="flex bg-slate-300 rounded-full p-4"
-          />
-        </div>
+        <img
+          src={Search}
+          alt=""
+          className="flex bg-white rounded-r-full p-[17.5px]"
+        />
       </div>
       <Weather weatherData={data} />
     </div>
