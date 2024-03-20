@@ -24,12 +24,12 @@ const Weather = ({ weatherData }) => {
   return (
     <div>
       {weatherData.list ? (
-        <div className="bg-white bg-opacity-20 w-[580px] h-[460px] rounded-md m-auto">
-          <div className="flex flex-col items-center align-top">
+        <div className="bg-white bg-opacity-20 w-[580px] h-[465px] rounded-md m-auto">
+          <div className="flex flex-col items-center gap-[4px] align-top">
             <img
               src={`${weather[weatherData.list[0].weather[0].main]}`}
               alt=""
-              className=""
+              className="h-[180px]"
             />
             <h1 className="text-white text-6xl">
               {weatherData.list[0].main.temp.toFixed(0)}&deg;C
@@ -37,6 +37,17 @@ const Weather = ({ weatherData }) => {
             <h1 className="text-white text-4xl">
               {weatherData.city.name},{weatherData.city.country}
             </h1>
+            <h1 className="text-white text-lg">
+              {weatherData.list[0].weather[0].description
+                .split(" ")
+                .map((word, index) =>
+                  index === 1
+                    ? word.charAt(0).toUpperCase() + word.slice(1)
+                    : word.charAt(0).toUpperCase() + word.slice(1)
+                )
+                .join(" ")}
+            </h1>
+
             <h1 className="text-white text-xl">
               {weatherData.list[0].dt_txt
                 .split(/(?:[-\s]+)/, 3)
@@ -61,7 +72,7 @@ const Weather = ({ weatherData }) => {
             </div>
           </div>
           {/* 3 Günlük Tahmin */}
-          <div className="bg-white bg-opacity-20 w-[580px] h-[305px] rounded-md flex m-auto">
+          <div className="bg-white bg-opacity-20 w-[580px] h-[325px] rounded-md flex m-auto">
             <div className="flex flex-col items-center justify-center mt-7 ">
               <div className="flex flex-col items-center align-top">
                 <h1 className="text-white text-sm">
@@ -81,6 +92,16 @@ const Weather = ({ weatherData }) => {
                 </h1>
                 <h1 className="text-white text-lg">
                   {weatherData.city.name},{weatherData.city.country}
+                </h1>
+                <h1 className="text-white text-lg">
+                  {weatherData.list[8].weather[0].description
+                    .split(" ")
+                    .map((word, index) =>
+                      index === 1
+                        ? word.charAt(0).toUpperCase() + word.slice(1)
+                        : word.charAt(0).toUpperCase() + word.slice(1)
+                    )
+                    .join(" ")}
                 </h1>
               </div>
               <div className="element flex flex-col gap-3 text-white mx-10 mb-10">
@@ -120,6 +141,16 @@ const Weather = ({ weatherData }) => {
                 </h1>
                 <h1 className="text-white text-lg">
                   {weatherData.city.name},{weatherData.city.country}
+                </h1>
+                <h1 className="text-white text-lg">
+                  {weatherData.list[16].weather[0].description
+                    .split(" ")
+                    .map((word, index) =>
+                      index === 1
+                        ? word.charAt(0).toUpperCase() + word.slice(1)
+                        : word.charAt(0).toUpperCase() + word.slice(1)
+                    )
+                    .join(" ")}
                 </h1>
               </div>
               <div className="element flex flex-col gap-3 text-white mx-20 mb-10">

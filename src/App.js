@@ -31,7 +31,7 @@ function App() {
   };
 
   return (
-    <div className=" w-[607px] h-[880px] m-auto mt-1 rounded-md  bg-gradient-to-r from-violet-500 to-fuchsia-500">
+    <div className=" w-[607px] h-[900px] m-auto mt-1 rounded-md  bg-gradient-to-r from-violet-500 to-fuchsia-500">
       <div className="flex items-center animate-pulse focus-within:animate-none  justify-center">
         <input
           type="text"
