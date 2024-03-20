@@ -35,7 +35,7 @@ const Weather = ({ weatherData }) => {
               {weatherData.list[0].main.temp.toFixed(0)}&deg;C
             </h1>
             <h1 className="text-white text-4xl">
-              {weatherData.city.name},{weatherData.city.country}
+              {weatherData.city.name} | {weatherData.city.country}
             </h1>
             <h1 className="text-white text-lg">
               {weatherData.list[0].weather[0].description
@@ -91,7 +91,7 @@ const Weather = ({ weatherData }) => {
                   {weatherData.list[8].main.temp.toFixed(0)}&deg;C
                 </h1>
                 <h1 className="text-white text-lg">
-                  {weatherData.city.name},{weatherData.city.country}
+                  {weatherData.city.name} | {weatherData.city.country}
                 </h1>
                 <h1 className="text-white text-lg">
                   {weatherData.list[8].weather[0].description
@@ -140,7 +140,7 @@ const Weather = ({ weatherData }) => {
                   {weatherData.list[16].main.temp.toFixed(0)}&deg;C
                 </h1>
                 <h1 className="text-white text-lg">
-                  {weatherData.city.name},{weatherData.city.country}
+                  {weatherData.city.name} | {weatherData.city.country}
                 </h1>
                 <h1 className="text-white text-lg">
                   {weatherData.list[16].weather[0].description
