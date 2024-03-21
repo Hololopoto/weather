@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Clear from "./Components/Images/clear.png";
 import Clouds from "./Components/Images/cloud.png";
 import Drizzle from "./Components/Images/drizzle.png";
@@ -8,7 +8,6 @@ import Snow from "./Components/Images/snow.png";
 import Wind from "./Components/Images/wind.png";
 
 const Weather = ({ weatherData }) => {
-  // const [main, setMain] = useState("");
   const weather = {
     Clear: Clear,
     Clouds: Clouds,
@@ -16,11 +15,6 @@ const Weather = ({ weatherData }) => {
     Rain: Rain,
     Snow: Snow,
   };
-  // console.log(weatherData.city.country);
-  // useEffect(() => {
-  //   setMain(weatherData.weather[0].main);
-  //   console.log("Mainnn", main);
-  // }, [weatherData]);
   return (
     <div>
       {weatherData.list ? (
