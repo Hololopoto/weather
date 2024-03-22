@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import Search from "./Components/Images/search.png";
 import Weather from "./Weather";
-import Weat from "./Weat";
 
 function App() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
   const api_key = "d02c70fe49bf4a70b2f024a6aba89a19";
-  //   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${api_key}`;
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=metric&appid=${api_key}`;
   const searchLocation = (event) => {
     if (event.key === "Enter") {
