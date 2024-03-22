@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Search from "./Components/Images/search.png";
 import Weather from "./Weather";
+import Weat from "./Weat";
 
 function App() {
   const [data, setData] = useState({});
